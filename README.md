@@ -14,6 +14,7 @@ You will need the following:
 Connecting wires.
 
 ## Schematic
+![Scheme](C:\Users\Alex\Desktop\Imagini\Schematic.jpg?raw=true "Scheme")
 
 This is my attempt to simulate a theremin on an Arduino. In addition, there are tunes incorporated ('Mario theme' and the chorus of 'Never gonna give you up')
 
