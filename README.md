@@ -3,7 +3,6 @@
 
 This is my attempt to simulate a theremin on an Arduino. In addition, there are tunes incorporated ('Mario theme' and the chorus of 'Never gonna give you up')
 
-
 # Necessary components
 You will need the following:
 2 x Photoresistor 5528;
@@ -14,10 +13,7 @@ You will need the following:
 Connecting wires.
 
 ## Schematic
-![Scheme](C:\Users\Alex\Desktop\Imagini\Schematic.jpg?raw=true "Scheme")
-
-This is my attempt to simulate a theremin on an Arduino. In addition, there are tunes incorporated ('Mario theme' and the chorus of 'Never gonna give you up')
-
+The scheme can be foun in the Scheme.jpg file.
 
 # Necessary components
 You will need the following:
