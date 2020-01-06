@@ -5,7 +5,7 @@ This is my attempt to simulate a theremin on an Arduino. In addition, there are 
 
 
 # Necessary components
-You will need the following:
+You will need the following: <br/>
 2 x Photoresistor 5528; <br/>
 5 x Resistors: 2 x 10K; <br/>
 1 x 1K, 2 x 330 ohm; <br/>
