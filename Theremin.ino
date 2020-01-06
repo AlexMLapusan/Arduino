@@ -2,13 +2,16 @@
 #include "pitches.h"
 #include "songs.h"
 
-#define photocellFrequPin 3
 #define callibrationPin 13
+#define photocellFrequPin 3
 #define photocellVolPin 2
-#define  inPin 13
 #define button 2
 #define _case1 3
 #define _case2 4
+#define max_frequ 2000
+#define min_frequ 100
+#define max_vol 255
+#define min_vol 50
 
 
 int pitches[]={ 31, 33, 35, 37, 39, 41, 44, 46, 49, 52, 55, 58, 62, 65, 69, 73, 78, 82, 87, 93, 98, 104, 110, 117, 123, 131, 139, 147, 156, 165, 175, 185, 196, 208, 220, 233, 247, 262, 277, 294, 311, 330, 349, 370, 392, 415, 440, 466, 494, 523, 554, 587, 622, 659, 698, 740, 784, 831, 880, 932, 988, 1047, 1109, 1175, 1245, 1319, 1397, 1480, 1568, 1661, 1760, 1865, 1976, 2093, 2217, 2349, 2489, 2637, 2794, 2960, 3136, 3322, 3520, 3729, 3951, 4186, 4435, 4699, 4978};
@@ -91,6 +94,7 @@ void playNever(int breakCondition)
        vol.tone(never[thisNote], _volume);
        vol.delay(noteDuration);
        
+       //vol.noTone() function is buggy, so we will simulate like so
        vol.tone(20000,1);
        vol.delay(pauseBetweenNotes);
  
@@ -101,15 +105,12 @@ void playNever(int breakCondition)
 }
 
 void setup() {
-  // cat timp e aprins led-ul se calibreaza
+  // while the led on the board (pin 13) is on you can callibrate the sensitivity of the photocells
   pinMode(callibrationPin, OUTPUT);
   digitalWrite(callibrationPin, HIGH);
-  pinMode(inPin,INPUT);
   pinMode(button, INPUT);
   pinMode(_case1, OUTPUT);
   pinMode(_case2, OUTPUT);
-  
-  // put your setup code here, to run once:
 
   while(millis() < 5000)
   {
@@ -150,10 +151,14 @@ int getFrequency()
     photocellFrequReading  = minFrequValue;
   if(photocellFrequReading > maxFrequValue)
     photocellFrequReading  = maxFrequValue;
+
+  //return the pitches- the freequency changes will be more visible
   frequency = map(photocellFrequReading, minFrequValue, maxFrequValue, 0, 89);
-  //Serial.print("Mapped value: ");
-  //Serial.println(frequency);
   return pitches[frequency];
+
+  //OR return a value between the min_frequ and max_frequ deffined at the start of the code - the freequency change will be smoother
+  //frequency = map(photocellFrequReading, minFrequValue, maxFrequValue, min_frequ, max_frequ);
+  //return frequency;
 }
 
 byte getVolume()
@@ -166,7 +171,7 @@ byte getVolume()
     photocellVolReading  = minVolValue;
   if(photocellVolReading > maxVolValue)
     photocellVolReading  = maxVolValue;
-  volume = map(photocellVolReading, minVolValue, maxVolValue, 50, 255);
+  volume = map(photocellVolReading, minVolValue, maxVolValue, min_vol, max_vol);
   if(volume == 50)
     volume=50;
   return volume;
@@ -200,8 +205,5 @@ void loop() {
     digitalWrite(_case2,LOW);
     playNever(timesPressed);
     //vol.noTone();
-  }
-  
-  
-  
+  } 
 }
