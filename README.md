@@ -13,7 +13,7 @@ You will need the following:
 Connecting wires.
 
 ## Schematic
-The scheme can be foun in the Scheme.jpg file.
+The scheme can be found in the Scheme.jpg file:
 https://github.com/AlexMLapusan/Arduino/blob/master/Schematic.jpg
 
 # Necessary components
