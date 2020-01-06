@@ -18,8 +18,7 @@ https://github.com/AlexMLapusan/Arduino/blob/master/Schematic.jpg
 
 # Necessary components
 You will need the following:
-2 x Photoresistor 5528;
-5 x Resistors: 2 x 10K; 1 x 1K, 2 x 330 ohm;
+2 x Photoresistor 5528;  5 x Resistors: 2 x 10K;  1 x 1K, 2 x 330 ohm;
 1 x Button;
 2 x Led;
 1 x Speaker;
