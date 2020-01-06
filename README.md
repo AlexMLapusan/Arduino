@@ -6,11 +6,13 @@ This is my attempt to simulate a theremin on an Arduino. In addition, there are 
 
 # Necessary components
 You will need the following:
-2 x Photoresistor 5528;  5 x Resistors: 2 x 10K;  1 x 1K, 2 x 330 ohm;
-1 x Button;
-2 x Led;
-1 x Speaker;
-Connecting wires.
+2 x Photoresistor 5528; <br/>
+5 x Resistors: 2 x 10K; <br/>
+1 x 1K, 2 x 330 ohm; <br/>
+1 x Button; <br/>
+2 x Led; <br/>
+1 x Speaker; <br/>
+Connecting wires. <br/>
 
 # Schematic
 The scheme can be found in the Scheme.jpg file:
