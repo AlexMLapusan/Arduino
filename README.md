@@ -3,18 +3,6 @@
 
 This is my attempt to simulate a theremin on an Arduino. In addition, there are tunes incorporated ('Mario theme' and the chorus of 'Never gonna give you up')
 
-# Necessary components
-You will need the following:
-2 x Photoresistor 5528;
-5 x Resistors: 2 x 10K; 1 x 1K, 2 x 330 ohm;
-1 x Button;
-2 x Led;
-1 x Speaker;
-Connecting wires.
-
-## Schematic
-The scheme can be found in the Scheme.jpg file:
-https://github.com/AlexMLapusan/Arduino/blob/master/Schematic.jpg
 
 # Necessary components
 You will need the following:
@@ -23,6 +11,11 @@ You will need the following:
 2 x Led;
 1 x Speaker;
 Connecting wires.
+
+# Schematic
+The scheme can be found in the Scheme.jpg file:
+https://github.com/AlexMLapusan/Arduino/blob/master/Schematic.jpg
+
 
 ## Implementation
 In this project I am using an additional library that allows the use of the function tone with 2 parameters (frequency and volume), more information can be found here https://github.com/connornishijima/arduino-volume1#installation. 
